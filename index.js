@@ -31,23 +31,41 @@ let matrix = {
   read: true
 }
 
+let rings = {
+  title: 'Lord of Rings',
+  author: 'JRR Tokien',
+  pages: 500,
+  read: true
+}
 
-booksArray = [hobbit, potter, matrix];
+
+booksArray = [hobbit, potter, matrix, rings];
 
 console.log(booksArray[0])
 
-arr = [li, li2, li3, li4]
 
 function elementsLoop(arr) {
   for(let i=0; i < arr.length; i++) {
-    let li = document.createElement('li')
-    let li2 = document.createElement('li')
-    let title = document.createTextNode(arr[i].title)
-    let author = document.createTextNode(arr[i].author)
-    li.appendChild(title)
-    li2.appendChild(author)
-    document.getElementById('container').appendChild(li)
-    document.getElementById('container').appendChild(li2)
+    let div = document.createElement('div');
+    div.className = 'card'
+
+    let title = document.createElement('p')
+    title.innerHTML = arr[i].title
+
+    let author = document.createElement('p')
+    author.innerHTML = arr[i].author
+
+    let pages = document.createElement('p')
+    pages.innerHTML = arr[i].pages
+    
+    let read = document.createElement('p')
+    read.innerHTML = arr[i].read
+
+    div.appendChild(title)
+    div.appendChild(author)
+    div.appendChild(pages)
+    div.appendChild(read)
+    document.getElementById('container').appendChild(div)
     
   }
 }
