@@ -4,3 +4,7 @@
 .card {
   border: 1px solid black;
 }
+
+#formd {
+  display: none;
+}

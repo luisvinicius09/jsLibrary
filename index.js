@@ -1,15 +1,3 @@
-// let myLibrary = [];
-
-// function Book() {
-//   // the constructor...
-// }
-
-// function addBookToLibrary() {
-//   // do stuff here
-// }
-
-
-
 let hobbit = {
   title: 'The Hobbit',
   author: 'Tolkien',
@@ -39,39 +27,73 @@ let rings = {
 }
 
 
-booksArray = [hobbit, potter, matrix, rings];
+myLibrary = [hobbit, potter, matrix, rings];
 
-console.log(booksArray[0])
+
+function Book(title, author, pages, read) {
+  this.title = title
+  this.author = author
+  this.pages = pages
+  this.read = read
+  }
+
+// submitBtn =  document.getElementById('submit').addEventListener('click', addBookToLibrary());
+
+// function addBookToLibrary() {
+// 
+//   const title = document.querySelector('#title').value;
+//   const author = document.querySelector('#author').value;
+//   const pages = document.querySelector('#pages').value;
+  
+//   const book = new Book(title.value, author.value, pages.value, read.value);
+//   myLibrary.push(book);
+// }
+
+
 
 
 function elementsLoop(arr) {
   for(let i=0; i < arr.length; i++) {
-    let div = document.createElement('div');
-    div.className = 'card'
+    let content = document.createElement('div');
+    content.className = 'card'
 
     let title = document.createElement('p')
-    title.innerHTML = arr[i].title
-
+    title.textContent = `${arr[i].title}`    
     let author = document.createElement('p')
-    author.innerHTML = arr[i].author
-
+    author.textContent = `${arr[i].author}`
     let pages = document.createElement('p')
-    pages.innerHTML = arr[i].pages
-    
+    pages.textContent = `${arr[i].pages}`
     let read = document.createElement('p')
-    read.innerHTML = arr[i].read
+    read.textContent = `${arr[i].read}`
 
-    div.appendChild(title)
-    div.appendChild(author)
-    div.appendChild(pages)
-    div.appendChild(read)
-    document.getElementById('container').appendChild(div)
+    content.appendChild(title)
+    content.appendChild(author)
+    content.appendChild(pages)
+    content.appendChild(read)
+    content.classList.add('content');
+    document.getElementById('container').appendChild(content)
     
   }
 }
 
-elementsLoop(booksArray)
+elementsLoop(myLibrary)
 
+
+// const addBtn = document.createElement('#addBtn')
+// addBtn.setAttribute('type', 'button');
+// addBtn.innerHTML = `${myLibrary.read ? 'Read' : 'Unread'}`
+
+// }); //target is the NODE ITSELF
+
+
+function showForm() { // eslint-disable-line no-unused-vars
+  document.getElementById('formd').style.display = 'block';
+  
+}
+
+const addBtn = document.getElementById('addBtn')
+addBtn.setAttribute('type', 'button');
+addBtn.addEventListener('click', (e) => e.target.style.display = 'none');
 
 // var person = prompt("Please enter your name", "Harry Potter");
 
