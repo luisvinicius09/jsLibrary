@@ -2,7 +2,7 @@ let hobbit = {
   title: 'The Hobbit',
   author: 'Tolkien',
   pages: 1200,
-  read: false
+  read: true
 }
 
 let potter = {
@@ -37,44 +37,55 @@ function Book(title, author, pages, read) {
   this.read = read
   }
 
-submitBtn =  document.getElementById('submit').addEventListener('click', addBookToLibrary());
+submitBtn =  document.getElementById('submit').addEventListener('click', () => {});
 
-function addBookToLibrary() {
-  const title = document.querySelector('#title').value;
-  const author = document.querySelector('#author').value;
-  const pages = document.querySelector('#pages').value;
+// function addBookToLibrary() {
+//   const title = document.querySelector('#title').value;
+//   const author = document.querySelector('#author').value;
+//   const pages = document.querySelector('#pages').value;
+//   const read = document.querySelector('#read').value
   
-  const book = new Book(title.value, author.value, pages.value, read.value);
-  myLibrary.push(book);
+//   const book = new Book(title.value, author.value, pages.value, read.value);
+//   myLibrary.push(book);
 
-
-}
+// }
 
 
 
 
 function elementsLoop(arr) {
-  for(let i=0; i < arr.length; i++) {
-    let content = document.querySelector('table');
-    content.className = 'card'
-
-    let title = document.getElementById('title')
-    title.textContent = `${arr[i].title}`    
-    let author = document.createElement('p')
-    author.textContent = `${arr[i].author}`
-    let pages = document.createElement('p')
-    pages.textContent = `${arr[i].pages}`
-    let read = document.createElement('p')
-    read.textContent = `${arr[i].read}`
-
-    content.appendChild(title)
-    content.appendChild(author)
-    content.appendChild(pages)
-    content.appendChild(read)
-    content.classList.add('content');
-    document.getElementById('container').appendChild(content)
+  // for(let i=0; i < arr.length; i++) {
     
-  }
+    // content.classList.add = 'card'
+
+    // let title = document.getElementById('title')
+    // title.textContent = `${arr[i].title}`    
+    // let author = document.createElement('p')
+    // author.textContent = `${arr[i].author}`
+    // let pages = document.createElement('p')
+    // pages.textContent = `${arr[i].pages}`
+    // let read = document.createElement('p')
+    // read.textContent = `${arr[i].read}`
+
+
+    // content.appendChild(title)
+    // content.appendChild(author)
+    // content.appendChild(pages)
+    // content.appendChild(read)
+    // content.classList.add('content');
+    // document.getElementById('container').appendChild(content)
+    
+  // }
+  let content = document.getElementById('table-body');
+  let books = arr.map(book => {
+    `<tr>
+        <td class="has-text-centered">${book.title}</td>
+        <td class="has-text-centered">${book.author}</td>
+        <td class="has-text-centered">${book.pages}</td>
+        <td class="has-text-centered">${book.read}</td>
+     </tr>`
+  }).join('\n')
+  content.innerHTML = books
 }
 
 elementsLoop(myLibrary)
