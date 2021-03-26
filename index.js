@@ -36,7 +36,10 @@ function Book(title, author, pages, read) {
   this.read = read
   }
 
-submitBtn =  document.getElementById('submit').addEventListener('click', addBookToLibrary());
+submitBtn = document.getElementById('submit').addEventListener('click', () => {
+  addBookToLibrary();
+  elementsLoop(myLibrary);
+});
 
 function addBookToLibrary() {
   const title = document.querySelector('#title').value;
@@ -45,8 +48,8 @@ function addBookToLibrary() {
   const read = document.querySelector('#read').value
   
   const book = new Book(title, author, pages, read);
+  console.log(book)
   myLibrary.push(book);
-
 }
 
 function elementsLoop(arr) {
@@ -64,7 +67,6 @@ function elementsLoop(arr) {
 }
 
 elementsLoop(myLibrary)
-
 
 // const addBtn = document.createElement('#addBtn')
 // addBtn.setAttribute('type', 'button');
