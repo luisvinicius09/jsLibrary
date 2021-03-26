@@ -26,7 +26,6 @@ let rings = {
   read: true
 }
 
-
 myLibrary = [hobbit, potter, matrix, rings];
 
 
@@ -37,21 +36,18 @@ function Book(title, author, pages, read) {
   this.read = read
   }
 
-submitBtn =  document.getElementById('submit').addEventListener('click', () => {});
+submitBtn =  document.getElementById('submit').addEventListener('click', addBookToLibrary());
 
-// function addBookToLibrary() {
-//   const title = document.querySelector('#title').value;
-//   const author = document.querySelector('#author').value;
-//   const pages = document.querySelector('#pages').value;
-//   const read = document.querySelector('#read').value
+function addBookToLibrary() {
+  const title = document.querySelector('#title').value;
+  const author = document.querySelector('#author').value;
+  const pages = document.querySelector('#pages').value;
+  const read = document.querySelector('#read').value
   
-//   const book = new Book(title.value, author.value, pages.value, read.value);
-//   myLibrary.push(book);
+  const book = new Book(title, author, pages, read);
+  myLibrary.push(book);
 
-// }
-
-
-
+}
 
 function elementsLoop(arr) {
   let books = arr.map(book => {
