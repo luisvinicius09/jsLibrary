@@ -37,27 +37,28 @@ function Book(title, author, pages, read) {
   this.read = read
   }
 
-// submitBtn =  document.getElementById('submit').addEventListener('click', addBookToLibrary());
+submitBtn =  document.getElementById('submit').addEventListener('click', addBookToLibrary());
 
-// function addBookToLibrary() {
-// 
-//   const title = document.querySelector('#title').value;
-//   const author = document.querySelector('#author').value;
-//   const pages = document.querySelector('#pages').value;
+function addBookToLibrary() {
+  const title = document.querySelector('#title').value;
+  const author = document.querySelector('#author').value;
+  const pages = document.querySelector('#pages').value;
   
-//   const book = new Book(title.value, author.value, pages.value, read.value);
-//   myLibrary.push(book);
-// }
+  const book = new Book(title.value, author.value, pages.value, read.value);
+  myLibrary.push(book);
+
+
+}
 
 
 
 
 function elementsLoop(arr) {
   for(let i=0; i < arr.length; i++) {
-    let content = document.createElement('div');
+    let content = document.querySelector('table');
     content.className = 'card'
 
-    let title = document.createElement('p')
+    let title = document.getElementById('title')
     title.textContent = `${arr[i].title}`    
     let author = document.createElement('p')
     author.textContent = `${arr[i].author}`
