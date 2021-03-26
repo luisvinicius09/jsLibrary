@@ -54,38 +54,17 @@ submitBtn =  document.getElementById('submit').addEventListener('click', () => {
 
 
 function elementsLoop(arr) {
-  // for(let i=0; i < arr.length; i++) {
-    
-    // content.classList.add = 'card'
-
-    // let title = document.getElementById('title')
-    // title.textContent = `${arr[i].title}`    
-    // let author = document.createElement('p')
-    // author.textContent = `${arr[i].author}`
-    // let pages = document.createElement('p')
-    // pages.textContent = `${arr[i].pages}`
-    // let read = document.createElement('p')
-    // read.textContent = `${arr[i].read}`
-
-
-    // content.appendChild(title)
-    // content.appendChild(author)
-    // content.appendChild(pages)
-    // content.appendChild(read)
-    // content.classList.add('content');
-    // document.getElementById('container').appendChild(content)
-    
-  // }
-  let content = document.getElementById('table-body');
   let books = arr.map(book => {
-    `<tr>
-        <td class="has-text-centered">${book.title}</td>
-        <td class="has-text-centered">${book.author}</td>
-        <td class="has-text-centered">${book.pages}</td>
-        <td class="has-text-centered">${book.read}</td>
-     </tr>`
+    return (
+      `<tr>
+        <td>${book.title}</td>
+        <td>${book.author}</td>
+        <td>${book.pages}</td>
+        <td>${book.read}</td>
+      </tr>`
+    )
   }).join('\n')
-  content.innerHTML = books
+  document.querySelector('tbody').innerHTML = books
 }
 
 elementsLoop(myLibrary)
