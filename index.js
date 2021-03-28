@@ -38,7 +38,7 @@ function Book(title, author, pages, read) {
 
 submitBtn = document.getElementById('submit').addEventListener('click', () => {
   addBookToLibrary();
-  elementsLoop(myLibrary);
+  displayBooks(myLibrary);
 });
 
 function addBookToLibrary() {
@@ -51,7 +51,7 @@ function addBookToLibrary() {
   myLibrary.push(book);
 }
 
-function elementsLoop(arr) {
+function displayBooks(arr) {
   let books = arr.map((book, index) => {
     return (
       `<tr>
@@ -67,11 +67,11 @@ function elementsLoop(arr) {
   document.querySelector('tbody').innerHTML = books
 }
 
-elementsLoop(myLibrary)
+displayBooks(myLibrary)
 
 function deleteBook(id) {
   myLibrary.slice(id, 1)
-  elementsLoop(myLibrary)
+  displayBooks(myLibrary)
 }
 
 function showForm() {
