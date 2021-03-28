@@ -59,8 +59,8 @@ function displayBooks(arr) {
         <td>${book.author}</td>
         <td>${book.pages}</td>
         <td>${book.read}</td>
-        <td><button>Toggle read</button></td>
-        <td><button type='button' onClick='deleteBook(${index})' >Delete</button></td>
+        <td><button class='btn' type='button' >Toggle read</button></td>
+        <td><button class='btn' type='button' onClick='deleteBook(${index})'>Delete</button></td>
       </tr>`
     )
   }).join('\n')
@@ -70,7 +70,7 @@ function displayBooks(arr) {
 displayBooks(myLibrary)
 
 function deleteBook(id) {
-  myLibrary.slice(id, 1)
+  myLibrary.splice(id, 1)
   displayBooks(myLibrary)
 }
 
