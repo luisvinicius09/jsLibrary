@@ -58,8 +58,7 @@ function displayBooks(arr) {
         <td>${book.title}</td>
         <td>${book.author}</td>
         <td>${book.pages}</td>
-        <td>${book.read}</td>
-        <td><button class='btn' type='button' onClick='toggleRead(${index})'>Toggle read</button></td>
+        <td class="has-text-centered"><button class="button is-small is-primary" id=${book.read} onClick='toggleRead(${index})' value="Read">${book.read}</button></td>
         <td><button class='btn' type='button' onClick='deleteBook(${index})'>Delete</button></td>
       </tr>`
     )
@@ -80,6 +79,7 @@ function toggleRead(id) {
         displayBooks(myLibrary)
       }
     }
+
   }
 }
 

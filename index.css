@@ -8,3 +8,10 @@
 #formd {
   display: none;
 }
+#true {
+  background-color: chartreuse;
+}
+
+#false {
+  background-color: yellow;
+}
