@@ -59,7 +59,7 @@ function displayBooks(arr) {
         <td>${book.author}</td>
         <td>${book.pages}</td>
         <td>${book.read}</td>
-        <td><button class='btn' type='button' >Toggle read</button></td>
+        <td><button class='btn' type='button' onClick='toggleRead(${index})'>Toggle read</button></td>
         <td><button class='btn' type='button' onClick='deleteBook(${index})'>Delete</button></td>
       </tr>`
     )
@@ -68,6 +68,20 @@ function displayBooks(arr) {
 }
 
 displayBooks(myLibrary)
+
+function toggleRead(id) {
+  for(let i=0; i < myLibrary.length; i++) {
+    if(i === id) {
+      if(myLibrary[i].read) {
+        myLibrary[i].read = false
+        displayBooks(myLibrary)
+      } else {
+        myLibrary[i].read = true
+        displayBooks(myLibrary)
+      }
+    }
+  }
+}
 
 function deleteBook(id) {
   myLibrary.splice(id, 1)
