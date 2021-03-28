@@ -1,4 +1,3 @@
-// eslint-disable-line no-unused-vars
 const hobbit = {
   title: 'The Hobbit',
   author: 'Tolkien',
@@ -36,12 +35,6 @@ function Book(title, author, pages, read) {
   this.pages = pages;
   this.read = read;
 }
-
-const submitBtn = document.getElementById('submit').addEventListener('click', () => {
-  addBookToLibrary();
-  displayBooks(myLibrary);
-});
-
 function addBookToLibrary() {
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
@@ -52,23 +45,29 @@ function addBookToLibrary() {
   myLibrary.push(book);
 }
 
+
 function displayBooks(arr) {
   const books = arr.map((book, index) => (
     `<tr>
-        <td>${book.title}</td>
-        <td>${book.author}</td>
-        <td>${book.pages}</td>
-        <td><button class="btn" id=${book.read} onClick='toggleRead(${index})' value="Read">${book.read}</button></td>
-        <td><button class='btn btn-delete' type='button' onClick='deleteBook(${index})'>Delete</button></td>
-      </tr>`
+    <td>${book.title}</td>
+    <td>${book.author}</td>
+    <td>${book.pages}</td>
+    <td><button class="btn" id=${book.read} onClick='toggleRead(${index})' value="Read">${book.read}</button></td>
+    <td><button class='btn btn-delete' type='button' onClick='deleteBook(${index})'>Delete</button></td>
+    </tr>`
   )).join('\n');
   document.querySelector('tbody').innerHTML = books;
 }
 
+const submitBtn = document.getElementById('submit').addEventListener('click', () => {
+  addBookToLibrary();
+  displayBooks(myLibrary);
+});
+
 displayBooks(myLibrary);
 
 function toggleRead(id) {
-  for (let i = 0; i < myLibrary.length; i++) {
+  for (let i = 0; i < myLibrary.length; i += 1) {
     if (i === id) {
       if (myLibrary[i].read) {
         myLibrary[i].read = false;
@@ -92,5 +91,4 @@ function showForm() {
 
 const addBtn = document.getElementById('addBtn');
 addBtn.setAttribute('type', 'button');
-addBtn.addEventListener('click', (e) => e.target.style.display = 'none');
-// eslint-enable-line no-unused-vars
+addBtn.addEventListener('click', e => { e.target.style.display = 'none'; });
