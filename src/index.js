@@ -1,3 +1,4 @@
+// eslint-disable-line no-unused-vars
 const hobbit = {
   title: 'The Hobbit',
   author: 'Tolkien',
@@ -26,7 +27,7 @@ const rings = {
   read: true,
 };
 
-myLibrary = [hobbit, potter, matrix, rings];
+const myLibrary = [hobbit, potter, matrix, rings];
 
 
 function Book(title, author, pages, read) {
@@ -36,7 +37,7 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 
-submitBtn = document.getElementById('submit').addEventListener('click', () => {
+const submitBtn = document.getElementById('submit').addEventListener('click', () => {
   addBookToLibrary();
   displayBooks(myLibrary);
 });
@@ -92,3 +93,4 @@ function showForm() {
 const addBtn = document.getElementById('addBtn');
 addBtn.setAttribute('type', 'button');
 addBtn.addEventListener('click', (e) => e.target.style.display = 'none');
+// eslint-enable-line no-unused-vars

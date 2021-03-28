@@ -2,58 +2,38 @@
 
 # Library
 
-> One paragraph statement about the project.
+> The project was aimed to build a list of books of which you can check-box whether you've reading them yet or not, and delete them from the list.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./build/screenshot.png)
 
 Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
+- Javascript
+- Bootstrap
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
+Open your terminal and cd where you want to store the project
+Run the following command - git clone https://github.com/luisvinicius09/jsLibrary
+Cd into the directory - cd Library
+Open the live server on your VScode Alt + L then Alt + o
 To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
 
 ## Authors
 
-👤 **Author1**
+👤 **Luis Vinicius Marques**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@luisvinicius09](https://github.com/luisvinicius09)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/luis-vinicius)
 
-👤 **Author2**
+👤 **German Aquila**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@realisticattorney](https://github.com/realisticattorney)
+- Twitter: [@ContoliAxl](https://www.twitter.com/contoliaxl)
+- Linkedin: [@germanaquila](https://www.linkedin.com/in/german-aquila-55a9171b5/)
 
 ## 🤝 Contributing
 
