@@ -1,0 +1,25 @@
+#container {
+  display: flex;
+}
+
+.card {
+  border: 1px solid black;
+}
+
+#formd {
+  display: none;
+}
+
+#true {
+  background-color: chartreuse;
+  border-style: none;
+}
+
+#false {
+  background-color: yellow;
+  border-style: none;
+}
+
+.btn-delete {
+  background-color: tomato;
+}
