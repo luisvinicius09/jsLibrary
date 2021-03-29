@@ -43,7 +43,7 @@ const addBookToLibrary = () => {
 
   const book = new Book(title, author, pages, read);
   myLibrary.push(book);
-}
+};
 
 
 const displayBooks = (arr) => {
@@ -57,7 +57,7 @@ const displayBooks = (arr) => {
     </tr>`
   )).join('\n');
   document.querySelector('tbody').innerHTML = books;
-}
+};
 
 const submitBtn = document.getElementById('submit').addEventListener('click', () => {
   addBookToLibrary();
@@ -78,16 +78,16 @@ const toggleRead = (id) => {
       }
     }
   }
-}
+};
 
 const deleteBook = (id) => {
   myLibrary.splice(id, 1);
   displayBooks(myLibrary);
-}
+};
 
 const showForm = () => {
   document.getElementById('formd').style.display = 'block';
-}
+};
 
 const addBtn = document.getElementById('addBtn');
 addBtn.setAttribute('type', 'button');
