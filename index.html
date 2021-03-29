@@ -41,9 +41,12 @@
         <input type="pages" class="form-control" id="pages" placeholder="pages">
       </div>
 
-      <div class="form-check">
-        <label class="form-check-label" for="exampleCheck1">Read</label>
-        <input type="checkbox" class="form-check-input" id="read" value='true'>
+      <div class="form-radio">
+        <label>Did you read this book?</label> <br>
+        <input type="radio" id="true" name='read' value='true'>
+        <label class="form-check-label" for="read">Yes</label>
+        <input type="radio" id="false" name='read' value='false' checked>
+        <label class="form-check-label" for="read">No</label>
       </div>
       <button type="button" id='submit' class="btn btn-primary">Submit</button>
     </form>
