@@ -35,7 +35,7 @@ function Book(title, author, pages, read) {
   this.pages = pages;
   this.read = read;
 }
-function addBookToLibrary() {
+const addBookToLibrary = () => {
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
   const pages = document.querySelector('#pages').value;
@@ -46,7 +46,7 @@ function addBookToLibrary() {
 }
 
 
-function displayBooks(arr) {
+const displayBooks = (arr) => {
   const books = arr.map((book, index) => (
     `<tr>
     <td>${book.title}</td>
@@ -66,7 +66,7 @@ const submitBtn = document.getElementById('submit').addEventListener('click', ()
 
 displayBooks(myLibrary);
 
-function toggleRead(id) {
+const toggleRead = (id) => {
   for (let i = 0; i < myLibrary.length; i += 1) {
     if (i === id) {
       if (myLibrary[i].read) {
@@ -80,12 +80,12 @@ function toggleRead(id) {
   }
 }
 
-function deleteBook(id) {
+const deleteBook = (id) => {
   myLibrary.splice(id, 1);
   displayBooks(myLibrary);
 }
 
-function showForm() {
+const showForm = () => {
   document.getElementById('formd').style.display = 'block';
 }
 
